@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root
+	{
+		--text: hsl(243, 100%, 93%);
+		--ProgressBg: hsl(229, 7%, 55%);
+		--cardBg: hsl(228, 56%, 26%);
+		--iconBg: hsl(229, 57%, 11%);
+		--progress: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+		--font: 'Raleway', sans-serif;
+	}
+*
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+body
+	{
+		background-image: url(./images/bg-mobile.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		height: 600px;
+		font-family: var(--font);
+		font-size: 14px;
+	}
+main
+	{
+		margin-top: 180px;
+	}
+.section1
+	{
+		background-color: var(--cardBg);
+		width: 90%;
+		margin: auto;
+		height: 220px;
+		border-radius: 10px 100px 10px 10px;
+	}
+.logo
+	{
+		display: block;
+		padding: 40px 0 0 10%;
+		width: 55%;
+	}
+.optionsContainer
+	{
+		margin-top: 30px;
+		display: flex;
+		width: 55%;
+		justify-content: space-between;
+		margin-left: 10%;
+	}
+.options
+	{
+		background-color: var(--iconBg);
+		border-radius: 13px;
+		padding: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+.card
+	{
+		display: block;
+		width: 100%;
+	}
+.section2
+	{
+		background-color: var(--cardBg);
+		width: 90%;
+		margin: auto;
+		margin-top: 20px;
+		height: 200px;
+		border-radius: 10px;
+	}
+.text
+	{
+		display: block;
+		color: var(--text);
+		padding-top: 30px;
+		text-align: center;
+		font-weight: 400;
+	}
+.text span
+	{
+		font-weight: 700;
+	}
+.progressContainer
+	{
+		width: 85%;
+		height: 23px;
+		background-color: var(--iconBg);
+		border-radius: 10px;
+		margin: auto;
+		margin-top: 18px;
+		display: flex;
+		align-items: center;
+		padding: 2px;
+	}
+.progressValue
+	{
+		width: 82.5%;
+		background-image: linear-gradient(90deg,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+		height: 17px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 2px;
+	}
+.ball
+	{
+		background-color: white;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+	}
+.size
+	{
+		color: white;
+		width: 85%;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		margin-top: 20px;
+		font-weight: 700;
+	}
+.sizeLeft
+	{
+		background-color: white;
+		width: 60%;
+		margin: auto;
+		height: 70px;
+		border-radius: 10px;
+		margin-top: 40px;
+	}
+.left
+	{
+		color: var(--iconBg);
+		display: flex;
+		text-align: center;
+		font-weight: 700;
+		align-content: center;
+		justify-content: center;
+	}
+.left h1, .left h3
+	{
+		display: block;
+		margin-top: 10px;
+		margin-right: 10px;
+		font-size: 40px;
+	}
+.left h3
+	{
+		color: var(--text);
+		font-weight: bolder;
+		font-weight: 700;
+		font-size: 15px;
+		margin-top: 30px;
+	}
+.attribution
+	{
+     	font-size: 11px;
+		text-align: center;
+		margin-top: 50px;
+	}
+.attribution a
+	{
+		color: hsl(228, 45%, 44%);
+		text-decoration: none;
+	}
+@media screen and (min-width: 800px)
+	{
+		body
+			{
+				background-image: url(./images/bg-desktop.png);
+				background-repeat: no-repeat;
+				background-position: bottom;
+				background-size: 100% 50%;
+				height: 475px;
+				background-color: var(--iconBg);
+			}
+		main
+			{
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				margin: auto;
+				margin-top: 190px;
+			}
+		.section1
+			{
+				width: 40%;
+			}
+		.optionsContainer
+			{
+				width: 55%;
+			}
+		.section2
+			{
+				width: 50%;
+				height: 170px;
+				margin-top: 50px;
+			}
+		.sizeLeft
+			{
+				position: relative;
+				top: -210px;
+				right: -120px;
+				width: 35%;
+				height: 65px;
+				border-radius: 7px 7px 0 7px;
+			}
+		.sizeLeft::after
+			{
+				content: '';
+				display: block;
+				margin-top: -7px;
+				margin-left: 157px;
+				border-bottom: 30px solid #fff;
+				border-right: 30px solid transparent;
+				transform: rotate(45deg);
+			}
+	}
